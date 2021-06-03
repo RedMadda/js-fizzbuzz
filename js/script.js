@@ -2,3 +2,20 @@
 
 
 // stampo i numeri da uno a 100
+
+var numeri = [];
+for (var i = 1; i <= 100; i++){
+    numeri.push(i);
+}
+for (i = 0; i < numeri.length; i++){
+ 
+  if (numeri[i] % 3 == 0 && numeri[i] % 5 == 0){
+      numeri[i] += " " + "BuzzFizz";
+  } else if (numeri[i] % 3 == 0 ){
+    numeri[i] += " " + "Fizz";
+  } else if (numeri[i] % 5 == 0){
+    numeri[i] += " " + "Buzz";
+  }
+
+  document.getElementById("stampa").innerHTML += numeri[i] + "</br>";
+}
